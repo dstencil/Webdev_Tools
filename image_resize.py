@@ -1,10 +1,11 @@
 from PIL import Image
 
-path = str(input('Enter path of image'))
+filepath = str(input('Enter path of image to resize: '))
+savepath = str(input('Enter path to save image: '))
 width = int(input("Enter width"))
 height = int(input("Enter Height"))
 
 
-with Image.open (Path) as im:
+with Image.open (filepath) as im:
     resized = im.resize((width,height))
-    resized.show()
+    resized.save(savepath)
